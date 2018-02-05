@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+
+        <button type="button" name="button" onclick="fazerMilkShake('Morango', 'Pequeno', 'Sem cobertura')">Fazer MilkShake</button>
+
+        <script type="text/javascript">
+
+
+            let fazerMilkShake = (sabor1, tamanho1, cobertura1) =>{
+
+                let milkShake = {
+                    sabor: sabor1,
+                    tamanho: tamanho1,
+                    cobertura: cobertura1
+                }
+
+
+                console.log(milkShake);
+                // return milkShake;
+            }
+
+
+            fazerMilkShake('Chocolate', 'Medio', 'Baunilha');
+            fazerMilkShake('Ovomaltine', 'Medio', 'Baunilha');
+            fazerMilkShake('Morango', 'Pequeno', 'Sem cobertura');
+            fazerMilkShake('Chocolate', 'Grande', 'Baunilha');
+
+
+
+        </script>
+    </body>
+</html>

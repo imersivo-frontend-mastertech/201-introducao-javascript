@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+ <html>
+     <head>
+         <meta charset="utf-8">
+         <title></title>
+     </head>
+     <body>
+
+         <script type="text/javascript">
+
+         /**
+           Criar um programa que calcula a média de um aluno e determina se ele foi
+           aprovado ou não, baseado nos seguintes critérios:
+           - Duas provas e um trabalho, sendo a segunda prova com peso 2
+           - A média de aprovação é 7
+         */
+
+         let prova1 = Number( prompt('Insira prova 1') );
+         let prova2 = Number( prompt('Insira prova 2') );
+         let trabalho = Number( prompt('Insira trabalho') );
+         let rematricula;
+
+
+         console.log(prova1);
+         console.log(prova2);
+         console.log(trabalho);
+
+         let media = (prova1 + (prova2 * 2) + trabalho) / 4;
+
+         if (media >= 7){
+             alert(`Aprovado: ${media}`);
+
+             rematricula = confirm('Fazer rematricula?');
+
+             console.log(rematricula);
+
+             if(rematricula){
+                 alert('Rematriculado');
+
+             } else{
+                 alert('Que pena');
+             }
+
+
+         } else{
+             alert(`Bombou`);
+         }
+
+
+
+
+         </script>
+     </body>
+ </html>

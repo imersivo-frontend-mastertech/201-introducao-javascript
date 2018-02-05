@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+
+        <button type="button" name="button" onclick="fazerPedido()">Fazer Pedido</button>
+
+        <ul>
+            <li id="info1"></li>
+            <li id="info2"></li>
+            <li id="info3"></li>
+        </ul>
+
+
+        <script type="text/javascript">
+        // 1-PEDIR PARA O USUARIO INFORMAR O SABOR, TAMANHO E COBERTURA
+        // -CHOCOLATE, MORANGO, BAUNILHA
+        // -PEQUENO, MEDIO, GRANDE
+        // -COM COBERTURA, SEM COBERTURA
+        //
+        // 2- IMPRIMIR NO HTML AS INFORMACOES DO PEDIDO
+        // 3- MOSTRAR UMA IMAGEM COM O SABOR DO MILKSHAKE
+
+
+        let fazerPedido = () =>{
+
+             let sabor = prompt('Informe o sabor:');
+             let tamanho = prompt('Informe o tamanho:');
+             let cobertura = prompt('Deseja cobertura?');
+
+            fazerMilkShake(sabor, tamanho, cobertura);
+        }
+
+
+
+        let fazerMilkShake = (s, t, c) =>{
+
+                let info1 = document.querySelector('#info1');
+                let info2 = document.querySelector('#info2');
+                let info3 = document.querySelector('#info3');
+
+                info1.innerHTML = s;
+                info2.innerHTML = t;
+                info3.innerHTML = c;
+
+                let endereco;
+
+                if(s == 'morango' || s == 'Morango'){
+
+                    endereco = 'https://www.comidaereceitas.com.br/images/stories/Milk_shake_morangooo.jpg'
+
+                } else if (s == 'chocolate'){
+
+                    endereco = 'http://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/8/1/0/GH0310H_Chocolate-Almond-Milkshakes_s4x3.jpg.rend.hgtvcom.616.462.suffix/1371607076437.jpeg'
+
+
+                } else if(s == 'baunilha'){
+
+                    endereco = 'https://i.ytimg.com/vi/xZLTTTIzW_4/hqdefault.jpg'
+
+                }
+
+                let img = document.createElement('IMG');
+
+                img.setAttribute('class', endereco);
+
+                document.body.appendChild(img);
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+
+
+    </body>
+</html>

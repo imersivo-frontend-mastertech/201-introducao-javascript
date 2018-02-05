@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ex 2</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        /**
+          Crie um programa que calcula juros simples baseado nos seguintes valores:
+          - Valor emprestado: 300
+          - Juros ao mês: 2,5%
+          - Tempo de empréstimo: 6 meses
+        */
+
+
+        let valorEmprestado = Number( prompt('Valor emprestado:'));
+        const jurosAoMes = 0.025;
+        let tempo = 6;
+
+
+        let juros = valorEmprestado * jurosAoMes * tempo;
+
+        //console.log(juros);
+
+        let total = valorEmprestado + juros;
+
+        console.log(`O valor de juros é R$${juros} e o valor total é R$${total}`);
+
+
+
+
+        </script>
+    </body>
+</html>
